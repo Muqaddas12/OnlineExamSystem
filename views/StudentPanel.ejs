@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/stylesheets/StudentPanel.css" />
+    <style>
+      #user-profile {
+        background-image: url("<%=ImageUrl%>");
+        background-size: cover; 
+        background-position: center; 
+        display: inline-flex;
+        border: 0.3vh solid black;
+        width: 9vw;
+        height: 20vh;
+        margin-left: 7vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="nav-bar">
+        <p id="title">Online Examination System</p>
+        <span id="author"> Developed By: Muqaddas</span>
+      </div>
+    </div>
+
+    <div class="root">
+      <div class="type">
+        <label id="details"
+          ><%=result[0].Course%> <%=result[0].Sem%> sem Online Exam</label
+        >
+      </div>
+    </div>
+
+    <div class="root">
+      <div id="content">
+        <!-- roll number div -->
+        <div id="user-roll-number">
+          <label class="roll-number"
+            >RollNumber : <%=result[0].RollNumber%></label
+          >
+        </div>
+
+        <!-- image div -->
+        <div id="ety">
+          <div id="user-profile"></div>
+          <!-- user-details div -->
+          <div>
+            <div id="user-details">
+              <label id="name-details" class="details"
+                >Name:<%=result[0].Name%></label
+              >
+              <label class="details">Course:<%=result[0].Course%></label>
+              <label class="details"
+                >Semester And Year :
+                <%=result[0].Sem%><%=result[0].Year%></label
+              >
+            </div>
+          </div>
+          <div id="instruction">
+            <span class="ins"
+              >1.Candidates must not be involved in communication of any kind
+              during examination.</span
+            ><br />
+            <span class="ins"
+              >2.Candidates must not browse on during examination.</span
+            ><br />
+            <span class="ins"
+              >3.Candidates must not bring thier phones into the examination
+              hall</span
+            ><br />
+            <span class="ins"
+              >4.Candidates not able to switch or close tab and close the
+              browser after examinatin start.</span
+            ><br />
+            <span class="ins">Good Luck!</span>
+            <form action="/Exampage" method="post">
+               <input id="con-btn"  type="submit" value="Start Exam" name="StartExam" />
+              </form>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="root">
+      <div id="footer">
+        <span>Online Examination Systems</span>
+      </div>
+    </div>
+  </body>
+</html>

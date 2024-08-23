@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/ExamPage.css">
+  <title>Document</title>
+</head>
+<body>
+<%if(start){%>
+  <div class="root">
+     <div id="instruction">
+    
+      
+        <span id="time-left">Time: </span>
+     
+        <div id="user-info">
+          <label class="user-details">Name: Muqaddas</label><br>
+          <label class="user-details">Course: MCA</label><br>
+          <label class="user-details">RollNumber: 20017418</label><br>
+          <label class="user-details">Father Name: Mohd Islam</label>
+        </div>
+        
+
+      <div id="controller">
+        <input onclick="Previous()" class="controller-btn" type="button" value="Previous">
+        <input onclick="Next()" class="controller-btn" type="button" value="Next">
+        <input onclick="Mark()" class="controller-btn" type="button" value="Mark">
+      </div>
+        
+          <video id="vid"></video>
+  
+  </div>
+    <div id="question-instruction">
+     <span class="instructions">1.Viewed But Not Attemped<div id='ins1' class="question-color-coding"></div></span>
+     <span class="instructions">2.Viewed And Attemped<div id='ins2' class="question-color-coding"></div></span>
+     <span class="instructions">3.Not Viewed And Not Attemped<div id='ins3' class="question-color-coding"></div></span>
+     <span class="instructions">4.Viewed But Mark As Attempt Later<div id='ins4'class="question-color-coding"></div></span>
+  </div>
+ 
+  </div>
+  <div class="root">
+    <div id="questions">
+      <input onclick="ButtonWorking()" id="start-exam" type="button" value="Start Exam">
+  <label id="user-question">
+  </div>
+  <div id="question-number"></div>
+  
+  </div>
+  <script src="/javascripts/Exampage.js"></script>
+  <%}%>
+</body>
+</html>

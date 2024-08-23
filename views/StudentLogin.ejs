@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/stylesheets/Homepage.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="nav-bar">
+        <p id="title">Online Examination System</p>
+        <span id="author"> Developed By: Muqaddas</span>
+      </div>
+    </div>
+
+    <div class="root">
+      <div class="type">
+        <a class="data-type" href="/">Homepage</a>
+        <a class="data-type" href="/AdminLogin">Teacher</a>
+        <a class="data-type" href="/StudentLogin">Student</a>
+      </div>
+    </div>
+
+    <div id="root-content" class="root">
+        
+      <div id="Student-Login-Content">
+      
+        <div id="content-child">
+          <form method="post" action="/StudentLogin">
+            <label id="input-label">Roll Number</label><br />
+            <input
+              name="Name"
+              id="input-box"
+              type="text"
+              placeholder="Enter Your Roll Number"
+              required
+            /><br />
+            <label id="input-label">Password</label><br />
+            <input
+              name="Password"
+              id="input-box"
+              type="password"
+              placeholder="Enter Your Password"
+              required
+            /><br />
+            <input id="sumbit" type="submit" value="Sumbit" /><br>
+         
+<label id="err"><%-err%></label>
+       
+            
+          
+            
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="root">
+      <div id="footer">
+        <span>Online Examination Systems</span>
+      </div>
+    </div>
+  </body>
+</html>
